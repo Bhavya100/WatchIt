@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<title>Video/Audio</title>
+
+<link rel='stylesheet' type='text/css' href='style.css' />
+<style type="text/css">
+
+</style>
+
+<script src='jquery.js'></script>
+
+<script src='javascript.js'></script>
+
+<script type='text/javascript'>
+
+$(document).ready(function() {
+	$('video').videoPlayer({
+		'playerWidth' : 0.95,
+		'videoClass' : 'video'	
+	});
+});
+
+</script>
+
+</head>
+<body>
+
+<div id="travel">
+	<a class="sub-head" href="http://www.inserthtml.com/2013/03/custom-html5-video-player/">&laquo; BACK TO ARTICLE</a>
+</div>
+
+<div class="container">
+	<video width="700" height="400">
+		<source src="big_buck_bunny.mp4" type="video/mp4">
+		<source src="big_buck_bunny.webm" type="video/webm">
+	</video>
+</div>
+
+</body>
+</html>
