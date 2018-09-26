@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {box-sizing: border-box;}
+
+#logo{
+
+float: left;
+
+}
+
+.series{
+	padding-left: 100px;
+	padding-top: 30px;
+	box-shadow: 10px 10px 5px grey;
+}
+
+
+.tv{
+	padding-top: 35px;
+	padding-left: 15px;
+	font-size: 50px;
+	color: #cc0000;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #00e6e6;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #ffffff;
+  padding: 20px 50px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color:#00cccc;
+  color: #ffffff;
+}
+
+.topnav a.active {
+  background-color:  #00b3b3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 20px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #990000;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.container {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100vh;
+}
+.container .slider {
+	background-color: #ffffff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 500%;
+	height: 110%;
+	animation: animate 20s linear infinite;
+}
+.container .slider .slide {
+	position: relative;
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+.container .slider .slide .caption { 
+	position: absolute;
+	bottom: 60px;
+	right: 60px;
+	left: 60px;
+	padding: 30px;
+	background-color: rgba(0,0,0,.5);
+	box-sizing:border-box;
+	transition: 0.7s;
+}
+.container .slider .slide .caption h2 { 
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-size: 48px;
+	transition: 0.5s;
+}
+.container .slider .slide .caption p { 
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-size: 18px;
+	transition: 0.5s;
+}
+.container .slider .slide.slide1 {
+	background: url(Luke_Cage_Poster.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.container .slider .slide.slide2 {
+	background: url(Jessica_Jones_Poster.png);
+	background-size: cover;
+	background-position: center;
+}
+.container .slider .slide.slide3 {
+	background: url(sacred_games.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.container .slider .slide.slide4 {
+	background: url(GOT.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+
+@keyframes animate {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -100%;
+	}
+	45% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	70% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	95% {
+		left: -300%;
+	}
+	100% {
+		left: -400%;
+	}
+}
+
+
+
+@media screen and (max-width: 768px) {
+	.container .slider .slide .caption { 
+		bottom: 20px;
+		right: 20px;
+		left: 20px;
+		padding: 20px;
+	}
+	.container .slider .slide .caption h2 { 
+		margin: 0 0 10px;
+		font-size: 30px;
+	}
+	.container .slider .slide .caption p { 
+		font-size: 16px;
+	}
+}
+
+</style>
+</head>
+<body background="texture3.jpg">
+
+
+<div class="topnav">
+	<img id="logo" src="watchit.png" width=180px height=100px background-colour:#000000>
+
+  <a class="active" href="#home">Menu</a>
+  <a href="#about">Genres</a>
+  <a href="#contact">Release</a>
+  <a href="#contact">Contact Us</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+<div class="container">
+    <div class="slider">
+        <div class="slide slide1">
+            <div class="caption">
+                <h2><b>Luke Cage</b></h2>
+                <p>This gritty, action-packed drama follows the evolution of Luke Cage (Mike Colter), a man with super strength and unbreakable skin caused by a sabotaged experiment. After a failed relationship with fellow superhero Jessica Jones, Cage tries to rebuild a quiet life in Harlem, New York --until he is pulled out of the shadows and forced into a battle for his city. Along the way, Cage cannot avoid confronting his past, which he has worked hard to bury. "Marvel's Luke Cage" is the third show in the Netflix-original Defenders series.</p>
+            </div>
+        </div>
+        <div class="slide slide2">
+            <div class="caption">
+                <h2><b>Jessica Jone</b></h2>
+                <p>This Netflix original chronicles the life of one of the darker Marvel characters, the mysterious Jessica Jones. When a tragedy puts an end to her short-lived career as a superhero, Jessica settles in New York City and opens her own detective agency, called Alias Investigations, which seems to be called into cases involving people who have special abilities. Suffering from post-traumatic stress syndrome, Jessica wants to do good, but her primary interest isn't in saving the world, it's saving her apartment and getting through each day. Based on a graphic novel intended for adults, this is not a superhero story for the kids.</p>
+            </div>
+        </div>
+        <div class="slide slide3">
+            <div class="caption">
+                <h2><b>Sacred Games</b></h2>
+                <p>Sartaj Singh is a troubled police inspector in Mumbai police, living on sleeping pills and seeking validation from a police force he nevertheless loathes for its corruption. He receives an anonymous phone call from Ganesh Gaitonde, a notorious crime lord who has been missing for 16 years. He tells Singh to save the city in 25 days, which initiates a chain of events that burrows deep into India's dark underworld. In the journey, Singh is helped by a Research and Analysis Wing officer, Anjali Mathur.</p>
+            </div>
+        </div>
+        <div class="slide slide4">
+            <div class="caption">
+                <h2><b>Game Of Thrones</b></h2>
+                <p>Game of Thrones is roughly based on the storylines of A Song of Ice and Fire, set in the fictional Seven Kingdoms of Westeros and the continent of Essos. The series chronicles the violent dynastic struggles among the realm's noble families for the Iron Throne, while other families fight for independence from it.</p>
+            </div>
+        </div>
+
+       
+       
+        <div class="slide slide1">
+            <div class="caption">
+                <h2><b>Luke Cage</b></h2>
+                <p>This gritty, action-packed drama follows the evolution of Luke Cage (Mike Colter), a man with super strength and unbreakable skin caused by a sabotaged experiment. After a failed relationship with fellow superhero Jessica Jones, Cage tries to rebuild a quiet life in Harlem, New York --until he is pulled out of the shadows and forced into a battle for his city. Along the way, Cage cannot avoid confronting his past, which he has worked hard to bury. "Marvel's Luke Cage" is the third show in the Netflix-original Defenders series.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tv">
+	<b>TV Series</b>
+</div>
+<p></p>
+<div class="series">
+	<img src="sacred.jpg">
+</div>
+
+<div class="series">
+	<img src=".jpg">
+</div> 
+</body>
+</html>
