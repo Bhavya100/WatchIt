@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+	<style>
+		#logo{
+		float: left;
+		}
+	
+	.heading{
+		font-size: 50px;
+		color: #cc0000;
+		padding-top: 50px;
+
+	}
+
+	.poster{
+		float: left;
+		padding-top: 25px;
+			
+	}
+
+	.description{
+		padding-left: 10px;
+		font-size: 35px;
+		color: #000000;
+		text-align: center;
+	}
+
+	.trailer{
+		padding-top: 40px;
+		padding-left: 300px;
+		padding-bottom: 25px;
+
+	}
+
+	.episodes{
+		font-size: 35px;
+		color: #cc0000;
+		text-align: center;
+	}
+
+	#left_column{
+	float: left;
+	padding-left: 300px; 
+	padding-right: 10px;
+
+}
+
+	#right_column{
+	float: right;
+	padding-left: 30px;
+	padding-right: 300px;
+
+}
+
+	.container2 {
+    position:relative;
+    width:250px;
+    height:350px;
+    
+}
+.container2 .box {
+   	position:relative;
+    width:calc(250px - 10px);
+    height:calc(350px - 50px);
+    float:left;
+    margin:15px;
+    box-sizing:border-box;
+    overflow:hidden;
+    background:#262626;
+    box-shadow:0 5px 10px rgba(0,0,0,.8);
+}
+.container2 .box:before {
+    content:'';
+    position:absolute;
+    top:10px;
+    left:10px;
+    right:10px;
+    bottom:10px;
+    border-top:1px solid #fff;
+    border-bottom:1px solid #fff;
+    box-sizing:border-box;
+    transition:0.5s;
+    transform: scaleX(0);
+    opacity:0;
+}
+.container2 .box:hover:before {
+    transform:scaleX(1);
+    opacity:1;
+}
+.container2 .box:after {
+    content:'';
+    position:absolute;
+    top:10px;
+    left:10px;
+    right:10px;
+    bottom:10px;
+    border-left:1px solid #fff;
+    border-right:1px solid #fff;
+    box-sizing:border-box;
+    transition:0.5s;
+    transform: scaleY(0);
+    opacity:0;
+}
+.container2 .box:hover:after {
+    transform:scaleY(1);
+    opacity:1;
+}
+.container2 .box .imgBox {
+    position:relative;
+}
+.container2 .box .imgBox img {
+    width:250px;
+    height: 350px;
+    transition:0.5s;
+}
+.container2 .box:hover .imgBox img {
+    opacity:.2;
+    transform:scale(1.2);
+}
+.container2 .box .content {
+    position:absolute;
+    width:100%;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:2;
+    padding:20px;
+    box-sizing:border-box;
+    text-align:center;
+}
+.container2 .box .content h2 {
+    margin: 0 0 10px;
+    padding:0;
+    color:#fff;
+    transition:0.5s;
+    transform:translateY(-50px);
+    opacity:0;
+    visibility:hidden;
+}
+.container2 .box .content p {
+    margin:0;
+    padding:0;
+    color:#fff;
+    transform:translateY(50px);
+    opacity:0;
+    visibility:hidden;
+}
+.container2 .box:hover .content h2,
+.container2 .box:hover .content P {
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0px);
+}
+
+
+	.topnav {
+	padding-top: 30px;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  padding: 20px 50px;
+  font-size: 50px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000000;
+}
+
+.topnav a:hover {
+  background-color:#cc0000;
+  color: #ffffff;
+}
+
+
+.topnav .search-container {
+	padding-top: 15px;
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 20px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #990000;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+#first_line{
+padding-bottom: 100px;
+
+}
+
+#second_line{
+padding-bottom: 250px;
+}
+
+#third_line{
+padding-bottom: 250px;
+}
+
+#fourth_line{
+padding-bottom: 250px;
+}
+
+div.polaroid {
+  width: 228px;
+  height: 320px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1.0), 0 6px 20px 0 rgba(0, 0, 0, 1.00);
+  text-align: center;
+}
+
+.button {
+    background-color: #cc0000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 700px;
+    cursor: pointer;
+}
+
+.button:hover {background-color: #ff0000}
+
+.button:active {
+  background-color: #ff0000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#play_button{
+	float: left;
+}
+
+#play{
+	padding-left: 330px;
+	padding-top: 25px;
+
+}
+
+	</style>
+</head>
+<body background="Images\texture2.jpg">
+<div id="logo">
+		<a href="home_page.html"><img id="logo" src="Images\watchit.png" width=200px height=130px background-colour:#000000></a>
+</div>
+
+<div class="topnav">
+
+  <a class="active" href="home_page.html"><b>Home</b></a>
+  <a href="#about"><b>Genres</b></a>
+  <a href="#contact"><b>Release</b></a>
+  <a href="#contact"><b>Contact Us</b></a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+<div class="heading">
+	<b>Sacred Games</b>
+</div>
+<hr>
+<div class="poster">
+	<div class="polaroid">
+	<img src="Images\sacred.jpg">
+</div>
+</div>
+<div class="description">
+
+		<p>Sartaj Singh is a troubled police inspector in Mumbai police, living on sleeping pills and seeking validation from a police force he nevertheless loathes for its corruption. He receives an anonymous phone call from Ganesh Gaitonde, a notorious crime lord who has been missing for 16 years. He tells Singh to save the city in 25 days, which initiates a chain of events that burrows deep into India's dark underworld. In the journey, Singh is helped by a Research and Analysis Wing officer, Anjali Mathur.</p>
+</div>
+
+<div class="trailer">
+<iframe width="700" height="400" src="https://www.youtube.com/embed/28j8h0RRov4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+</div>
+<div class="episodes">
+	<p><b>Episodes</b></p>
+	<hr align="center" size="15px" width="750px" noshade="1">
+</div>
+<div id="first_line">
+	<a href="Videos\TV Series\Sacred Games\S01E01.html">
+	<div id="left_column">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\ashwathama.png" height="725px" width="725px">					
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>Episode 1:Ashwathama</b></p>
+            		<p><b>A mysterious phone call from an anonymous man leads police officer Sartaj Singh on a chase around Mumbai in a dangerous cat-and-mouse game.</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+	</a>
+
+	<div id="right_column">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\halahala.png" height="725px" width="725px">
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>Episode 2:HalaHala</b></p>
+            		<p>News of Ganesh Gaitonde creates a stir among Mumbai's VIPs, from politicians to film stars. Removed from the case, Sartaj begins his own investigation.</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+</div>
+
+<div id="second_line">
+	<a href="">
+	<div id="left_column">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\atapi_vatapi.png" height="725px" width="725px">					
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>Episode 3:Atapi Vatapi</b></p>
+            		<p><b>The woman found in the bunker leads Sartaj to Gaitonde's thug, Bunty. In a flashback, Gaitonde recalls stealing a lucky charm from rival Suleiman Isa.</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+	</a>
+
+	<div id="right_column">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\brahmahatya.png" height="725px" width="725px">
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>Episode 4:Brahmahatya</b></p>
+            		<p><b>TV starlet Nayanika visits Bunty with a hidden camera. In the mid-'80s, Gaitonde discovers a racket even more lucrative than drugs and guns: politics.</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+</div>
+
+<div id="third_line">
+	<a href="">
+	<div id="left_column">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\sarama.png" height="725px" width="725px">					
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>Episode 5:Sarama</b></p>
+            		<p><b>To save Nayanika, Sartaj intervenes during a RAW operation. In 1992, as political unrest increases, so does the bloodshed from Gaitonde and Isa's feud.</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+	</a>
+
+	<div id="right_column">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\pretakalpa.jpg" height="725px" width="725px">
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>Episode 6:Pretakalpa</b></p>
+            		<p><b>When Sartaj's constable, Katekar, is pressured to investigate the disappearance of a young man from a Muslim slum, disastrous consequences follow.</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+</div>
+
+<div id="fourth_line">
+	<a href="">
+	<div id="left_column">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\rudra.png" height="725px" width="725px">					
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>Episode 7:Rudra</b></p>
+            		<p><b>Hoping to tie up the many loose ends of their case, Sartaj and Anjali reunite to figure out how the enigmatic Trivedi is linked to Gaitonde's prophecy.</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+	</a>
+
+	<div id="right_column">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\yayati.png" height="725px" width="725px">
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>Episode 8:Yayati</b></p>
+            		<p>To save Mumbai from impending doom, Sartaj races against time to find out who Gaitonde's third father is and what's planned to happen on the 25th day.</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+</div>
+<audio src="sacred_games.mp3" loop="true"  autoplay="true"/>
+</body>
+</html>                                              

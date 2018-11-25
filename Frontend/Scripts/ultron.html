@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+	<style>
+		#logo{
+		float: left;
+		}
+	
+	.heading{
+		font-size: 50px;
+		color: #cc0000;
+		padding-top: 50px;
+
+	}
+
+	.poster{
+		float: left;
+		padding-top: 25px;
+			
+	}
+
+	.description{
+		padding-left: 10px;
+		font-size: 35px;
+		color: #000000;
+		text-align: center;
+	}
+
+	.trailer{
+		padding-top: 40px;
+		padding-left: 300px;
+		padding-bottom: 25px;
+
+	}
+
+	.episodes{
+		font-size: 35px;
+		color: #cc0000;
+		text-align: center;
+	}
+
+	#left_column{
+	float: left;
+	padding-left: 300px; 
+	padding-right: 10px;
+
+}
+
+	#right_column{
+	float: right;
+	padding-left: 30px;
+	padding-right: 300px;
+
+}
+
+
+
+	.topnav {
+	padding-top: 30px;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  padding: 20px 50px;
+  font-size: 50px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000000;
+}
+
+.topnav a:hover {
+  background-color:#cc0000;
+  color: #ffffff;
+}
+
+
+.topnav .search-container {
+	padding-top: 15px;
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 20px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #990000;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+#first_line{
+padding-bottom: 100px;
+
+}
+
+#second_line{
+padding-bottom: 250px;
+}
+
+#third_line{
+padding-bottom: 250px;
+}
+
+#fourth_line{
+padding-bottom: 250px;
+}
+
+div.polaroid {
+  width: 220px;
+  height: 320px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1.0), 0 6px 20px 0 rgba(0, 0, 0, 1.00);
+  text-align: center;
+}
+
+.button {
+    background-color: #cc0000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 700px;
+    cursor: pointer;
+}
+
+.button:hover {background-color: #ff0000}
+
+.button:active {
+  background-color: #ff0000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#play_button{
+	float: left;
+}
+
+#play{
+	padding-left: 330px;
+	padding-top: 25px;
+
+}
+
+	</style>
+</head>
+<body background="texture2.jpg">
+<div id="logo">
+		<a href="home_page.html"><img id="logo" src="watchit.png" width=200px height=130px background-colour:#000000></a>
+</div>
+
+<div class="topnav">
+
+  <a class="active" href="home_page.html"><b>Home</b></a>
+  <a href="#about"><b>Genres</b></a>
+  <a href="#contact"><b>Release</b></a>
+  <a href="#contact"><b>Contact Us</b></a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+<div class="heading">
+	<b>Avengers:Age OF Ultron</b>
+</div>
+<hr>
+<div class="poster">
+	<div class="polaroid">
+	<img src="avengers2.jpg">
+</div>
+</div>
+<div class="description">
+
+		<p>Now the Avengers, Iron Man, Thor, Captain America, the Hulk, Black Widow and Hawkeye, must reassemble to stop Ultron from causing mass destruction. Aside from this, the Avengers also must take on the powerful twins Quicksilver and Scarlet Witch as well as the new entity called Vision.</p>
+</div>
+
+<div class="trailer">
+<iframe width="700" height="400" src="https://www.youtube.com/embed/28j8h0RRov4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+</div>
+<button class="button" margin-right= 53px>Play</button>
+<audio src="sacred_games.mp3" loop="true"  autoplay="true"/>
+</body>
+</html>                                              

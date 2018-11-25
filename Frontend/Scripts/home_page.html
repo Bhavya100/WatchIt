@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {box-sizing: border-box;}
+
+body {
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+}
+.container2 {
+    position:relative;
+    width:250px;
+    height:350px;
+    
+}
+.container2 .box {
+   	position:relative;
+    width:calc(250px - 2px);
+    height:calc(350px - 10px);
+    float:left;
+    margin:15px;
+    box-sizing:border-box;
+    overflow:hidden;
+    background:#262626;
+    box-shadow:0 5px 10px rgba(0,0,0,.8);
+}
+.container2 .box:before {
+    content:'';
+    position:absolute;
+    top:10px;
+    left:10px;
+    right:10px;
+    bottom:10px;
+    border-top:1px solid #fff;
+    border-bottom:1px solid #fff;
+    box-sizing:border-box;
+    transition:0.5s;
+    transform: scaleX(0);
+    opacity:0;
+}
+.container2 .box:hover:before {
+    transform:scaleX(1);
+    opacity:1;
+}
+.container2 .box:after {
+    content:'';
+    position:absolute;
+    top:10px;
+    left:10px;
+    right:10px;
+    bottom:10px;
+    border-left:1px solid #fff;
+    border-right:1px solid #fff;
+    box-sizing:border-box;
+    transition:0.5s;
+    transform: scaleY(0);
+    opacity:0;
+}
+.container2 .box:hover:after {
+    transform:scaleY(1);
+    opacity:1;
+}
+.container2 .box .imgBox {
+    position:relative;
+}
+.container2 .box .imgBox img {
+    width:250px;
+    height: 350px;
+    transition:0.5s;
+}
+.container2 .box:hover .imgBox img {
+    opacity:.2;
+    transform:scale(1.2);
+}
+.container2 .box .content {
+    position:absolute;
+    width:100%;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:2;
+    padding:20px;
+    box-sizing:border-box;
+    text-align:center;
+}
+.container2 .box .content h2 {
+    margin: 0 0 10px;
+    padding:0;
+    color:#fff;
+    transition:0.5s;
+    transform:translateY(-50px);
+    opacity:0;
+    visibility:hidden;
+}
+.container2 .box .content p {
+    margin:0;
+    padding:0;
+    color:#fff;
+    transform:translateY(50px);
+    opacity:0;
+    visibility:hidden;
+}
+.container2 .box:hover .content h2,
+.container2 .box:hover .content P {
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0px);
+}
+
+#logo{
+
+float: left;
+
+}
+
+#first_line{
+padding-bottom: 100px;
+
+}
+
+#second_line{
+padding-bottom: 250px;
+}
+
+#third_line{
+padding-bottom: 250px;
+}
+
+#sacred{
+	float: left;
+	padding-left: 300px; 
+	padding-right: 10px;
+
+}
+
+#got{
+	float: right;
+	padding-left: 30px;
+	padding-right: 300px;
+
+}
+
+#flash{
+	float: left;
+	padding-top: 100px;
+	padding-left: 300px; 
+	padding-right: 10px;
+
+}
+
+#arrow{
+	float: right;
+	padding-top: 100px;
+	padding-left: 30px;
+	padding-right: 300px;
+
+}
+
+#BBT{
+	float: left;
+	padding-top: 100px;
+	padding-left: 300px; 
+	padding-right: 10px;
+	padding-bottom: 70px;
+
+}
+
+#breaking{
+	float: right;
+	padding-top: 100px;
+	padding-left: 30px;
+	padding-right: 300px;
+	padding-bottom: 70px;
+
+}
+
+.tv{
+	padding-top: 35px;
+	padding-left: 500px;
+	font-size: 50px;
+	color: #cc0000;
+}
+
+.movies{
+	padding-top: 750px;
+	padding-left: 500px;
+	font-size: 50px;
+	color: #cc0000;
+}
+
+div.polaroid {
+  width: 250px;
+  height: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1.0), 0 6px 20px 0 rgba(0, 0, 0, 1.00);
+  text-align: center;
+}
+
+	.topnav {
+	padding-top: 30px;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  padding: 20px 50px;
+  font-size: 50px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000000;
+}
+
+.topnav a:hover {
+  background-color:#cc0000;
+  color: #ffffff;
+}
+
+
+.topnav .search-container {
+	padding-top: 15px;
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 20px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #990000;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.container {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100vh;
+}
+.container .slider {
+	background-color: #ffffff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 500%;
+	height: 110%;
+	animation: animate 20s linear infinite;
+}
+.container .slider .slide {
+	position: relative;
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+.container .slider .slide .caption { 
+	position: absolute;
+	bottom: 60px;
+	right: 60px;
+	left: 60px;
+	padding: 30px;
+	background-color: rgba(0,0,0,.5);
+	box-sizing:border-box;
+	transition: 0.7s;
+}
+.container .slider .slide .caption h2 { 
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-size: 48px;
+	transition: 0.5s;
+}
+.container .slider .slide .caption p { 
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-size: 18px;
+	transition: 0.5s;
+}
+.container .slider .slide.slide1 {
+	background: url("Images/Luke_Cage_Poster.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.container .slider .slide.slide2 {
+	background: url("Images/Jessica_Jones_Poster.png");
+	background-size: cover;
+	background-position: center;
+}
+.container .slider .slide.slide3 {
+	background: url("Images/sacred_games.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.container .slider .slide.slide4 {
+	background: url("Images/GOT.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+
+@keyframes animate {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -100%;
+	}
+	45% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	70% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	95% {
+		left: -300%;
+	}
+	100% {
+		left: -400%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.container .slider .slide .caption { 
+		bottom: 20px;
+		right: 20px;
+		left: 20px;
+		padding: 20px;
+	}
+	.container .slider .slide .caption h2 { 
+		margin: 0 0 10px;
+		font-size: 30px;
+	}
+	.container .slider .slide .caption p { 
+		font-size: 16px;
+	}
+}
+.footer{
+    color: white;
+    border-top: 8px solid crimson;
+    background-color: #c91d61;
+    background: linear-gradient(20deg,blue,crimson,purple); /*Change colors as you want*/
+    background-size: 1000% 1000% !important;
+    -webkit-animation: changeColors 30s ease infinite;
+    -moz-animation: changeColors 30s ease infinite;
+    -o-animation: changeColors 30s ease infinite;
+    animation: changeColors 30s ease infinite;
+}
+
+@-webkit-keyframes changeColors {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+</style>
+</head>
+<body background="Images\texture2.jpg">
+
+
+<div class="topnav">
+	<img id="logo" src="Images\watchit.png" width=180px height=100px background-colour:#000000>
+
+  <a class="active" href="#home"><b>Home</b></a>
+  <a href="#about"><b>Genres</b></a>
+  <a href="#contact"><b>Release</b></a>
+  <a href="#contact"><b>Contact Us</b></a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+<div class="container">
+    <div class="slider">
+        <div class="slide slide1">
+            <div class="caption">
+                <h2><b>Luke Cage</b></h2>
+                <p>This gritty, action-packed drama follows the evolution of Luke Cage (Mike Colter), a man with super strength and unbreakable skin caused by a sabotaged experiment. After a failed relationship with fellow superhero Jessica Jones, Cage tries to rebuild a quiet life in Harlem, New York --until he is pulled out of the shadows and forced into a battle for his city. Along the way, Cage cannot avoid confronting his past, which he has worked hard to bury. "Marvel's Luke Cage" is the third show in the Netflix-original Defenders series.</p>
+            </div>
+        </div>
+        <div class="slide slide2">
+            <div class="caption">
+                <h2><b>Jessica Jone</b></h2>
+                <p>This Netflix original chronicles the life of one of the darker Marvel characters, the mysterious Jessica Jones. When a tragedy puts an end to her short-lived career as a superhero, Jessica settles in New York City and opens her own detective agency, called Alias Investigations, which seems to be called into cases involving people who have special abilities. Suffering from post-traumatic stress syndrome, Jessica wants to do good, but her primary interest isn't in saving the world, it's saving her apartment and getting through each day. Based on a graphic novel intended for adults, this is not a superhero story for the kids.</p>
+            </div>
+        </div>
+        <div class="slide slide3">
+            <div class="caption">
+                <h2><b>Sacred Games</b></h2>
+                <p>Sartaj Singh is a troubled police inspector in Mumbai police, living on sleeping pills and seeking validation from a police force he nevertheless loathes for its corruption. He receives an anonymous phone call from Ganesh Gaitonde, a notorious crime lord who has been missing for 16 years. He tells Singh to save the city in 25 days, which initiates a chain of events that burrows deep into India's dark underworld. In the journey, Singh is helped by a Research and Analysis Wing officer, Anjali Mathur.</p>
+            </div>
+        </div>
+        <div class="slide slide4">
+            <div class="caption">
+                <h2><b>Game Of Thrones</b></h2>
+                <p>Game of Thrones is roughly based on the storylines of A Song of Ice and Fire, set in the fictional Seven Kingdoms of Westeros and the continent of Essos. The series chronicles the violent dynastic struggles among the realm's noble families for the Iron Throne, while other families fight for independence from it.</p>
+            </div>
+        </div>
+
+       
+       
+        <div class="slide slide1">
+            <div class="caption">
+                <h2><b>Luke Cage</b></h2>
+                <p>This gritty, action-packed drama follows the evolution of Luke Cage (Mike Colter), a man with super strength and unbreakable skin caused by a sabotaged experiment. After a failed relationship with fellow superhero Jessica Jones, Cage tries to rebuild a quiet life in Harlem, New York --until he is pulled out of the shadows and forced into a battle for his city. Along the way, Cage cannot avoid confronting his past, which he has worked hard to bury. "Marvel's Luke Cage" is the third show in the Netflix-original Defenders series.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tv">
+	<b>Top TV Series</b>
+</div>
+<hr align="center" size="15px" width="1000px" noshade="red">
+<p></p>
+<div id="first_line">
+	<a href="sacred_games.html">
+	<div id="sacred">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\sacredgames.jpg" height="350px" width="250px">					
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>Sacred Games</b></p>
+            		<p>IMDB Rating:9.1/10</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+	</a>
+
+	<div id="got">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\game.jpg" height="350px" width="250px">
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>Game Of Throne</b></p>
+            		<p>IMDB Rating:9.5/10</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+</div>
+
+<div id="second_line">
+	<div id="flash">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\theflash.jpg" height="350px" width="250px">
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>The Flash</b></p>
+            		<p>IMDB Rating:7.9/10</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+	
+	<div id="arrow">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\arrow.jpg" height="350px" width="250px">
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>Arrow</b></p>
+            		<p>IMDB Rating:7.7/10</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+</div>
+
+<div id="third_line">
+	<div id="BBT">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\BBT.jpg" height="350px" width="250px">
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>The Big Bang Theory</b></p>
+            		<p>IMDB Rating:8.2/10</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+	
+	<div id="breaking">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\breakingbad.jpg" height="350px" width="250px">
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>Breaking Bad</b></p>
+            		<p>IMDB Rating:9.5/10</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+</div>
+<p></p>
+<p></p>
+<div class="movies">
+	<p><b>Top Movies</b>
+</div>
+<hr align="center" size="15px" width="1000px" noshade="red">
+<p></p>
+<div id="first_line">
+	<a href="infinity_war.html">
+	<div id="sacred">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\infinity.jpg" height="350px" width="250px">
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>Avengers:Infinity Wars</b></p>
+            		<p>IMDB Rating:8.6/10</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+	</a>
+	
+	<div id="got">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\harry.jpg" height="350px" width="250px">
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>Harry Potter</b></p>
+            		<p>IMDB Rating:8.1/10</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+</div>
+
+<div id="second_line">
+	<a href="avengers.html">
+	<div id="flash">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\avengers(2012).jpg" height="350px" width="250px">
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>Avengers</b></p>
+            		<p>IMDB Rating:8.6/10</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+	</a>
+	
+	<a href="ultron.html">
+	<div id="arrow">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\ultron.jpg" height="350px" width="250px">
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>Avengers:Age Of Ultron</b></p>
+            		<p>IMDB Rating:7.2/10</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+</div>
+</a>
+
+<div id="third_line">
+	<div id="BBT">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\dunkirk.jpg" height="350px" width="250px">
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>Dunkirk</b></p>
+            		<p>IMDB Rating:8.0/10</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+	
+	<div id="breaking">
+		<div class="container2">
+    		<div class="box">
+        		<div class="imgBox">
+        			<div class="polaroid">
+						<img src="Images\hunger.jpg" height="350px" width="250px">
+					</div>
+				</div>
+				<div class="content">
+            		<p><b>The Hunger Games</b></p>
+            		<p>IMDB Rating:7.5/10</b></p>
+       			</div>
+    		</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
