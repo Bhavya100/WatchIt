@@ -9,6 +9,9 @@ Downloading just the frontend folder will also do as the rest are just test file
 
 I had a backend of approximately 40GB which consisted of just movies and TV Series. Can't upload such big files here. Will upload them on Google Drive in the same manner in which I had on my device. Will provide the link here once it is done. The link may ask for permission. I will grant permission as soon as I get notified.
 
+I have given the link in the databse file to the content of the databse. I am still uploading content but have completed with a major part.
+Note:- The movies are not for commercial use. They are just for projects.
+
 #### Do checkout my IEEE SAKEC App 
 It is an app made for the student chapter IEEE of my college. 
 https://github.com/Bhavya100/IEEE-SAKEC-App
